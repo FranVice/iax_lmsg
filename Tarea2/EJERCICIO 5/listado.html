@@ -1,0 +1,95 @@
+<!-- 
+  Autor: Franklin Eduardo Vicente Jimenez
+  Descripción: Página web para gestionar actividades escolares en el Instituto, con filtros para búsqueda y listado de actividades. 
+  Fecha de creación: 11/11/2024
+  Última modificación: 11/11/2024
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAX actividades escolares</title>
+    <link rel="stylesheet" href="listado.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">    
+            <img src="images/iax_logo.png" alt="Logo de IAX" style="width: 200px; height: auto;"> 
+        </div>    
+        <h1>IAX actividades escolares</h1>
+    </header>
+      
+    <!-- Filtros -->
+    <fieldset>
+        <legend>Filtros:</legend>
+        <label for="profesor">Nombre del profesor responsable:</label>
+        <input type="text" id="profesor" name="profesor" size="30" required="">
+        <br>
+        <label for="titulo">Título de la actividad:</label>
+        <input type="text" id="titulo" name="titulo" size="30">
+        <br>   
+        <div class="inline">
+            <label for="pendiente">Pendiente de validar</label>
+            <input type="checkbox" id="pendiente">
+        </div>   
+        <br><br>
+        <div class="date-container">
+            <label for="fecha-desde">Fecha desde:</label>
+            <input type="date" id="fecha-desde">
+        </div>
+        <br>
+        <div class="date-container">
+            <label for="fecha-hasta">Fecha hasta:</label>
+            <input type="date" id="fecha-hasta">
+        </div>
+        <br>
+        <div class="button-container">
+            <button class="button-green" onclick="limpiarFiltros()">Limpiar</button>
+            <button class="button-green" onclick="aplicarFiltros()">Enviar</button>
+        </div>
+    </fieldset>
+  
+    <!-- Listado de actividades -->
+    <h5 align="center">Listado de actividades propuestas</h5> 
+    <table style="width: 100%;" id="tabla-actividades">
+        <thead>
+            <tr>
+                <th>Pdte. Validar</th>
+                <th>Nombre profes. resp.</th>
+                <th>Título o denominación de la actividad</th>
+                <th>Departamento</th>
+                <th>Fecha/hora de inicio/salida</th>
+                <th>Fecha/hora de fin/llegada</th>
+                <th>Lugar de realización</th>
+                <th>Grupos implicados</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="validar1"></td>
+                <td>Rodrigo Martínez Rodríguez</td>
+                <td>Visita a CPD Universidad de Murcia</td>
+                <td>Informática</td>
+                <td>10/11/2022 09:00</td>
+                <td>10/11/2022 14:00</td>
+                <td>Campus de Espinardo</td>
+                <td>DAM1, DAM2, DAM1d, DAM2d</td>
+                <td><button onclick="alert('Acción para Rodrigo Martínez')">Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="validar2"></td>
+                <td>María Marquez</td>
+                <td>Visita a empresa NTTData</td>
+                <td>Informática</td>
+                <td>22/11/2022 10:00</td>
+                <td>22/11/2022 14:30</td>
+                <td>Juan Carlos I, edif. Torre de cristal</td>
+                <td>DAM2, DAM2d</td>
+                <td><button onclick="alert('Acción para María Marquez')">Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="validar3"></td>
+                <td>Benito Sánchez</td>
+                <td>Visita
+

@@ -1,0 +1,142 @@
+<!-- 
+  Autor: Franklin Eduardo Vicente Jimenez
+  Descripción: Formulario web para el registro o edición de actividades escolares en el Instituto IAX. 
+               Incluye campos para introducir los datos de la actividad, desde información del profesor 
+               responsable hasta los detalles logísticos de la actividad, tales como transporte y coste.
+  Fecha de creación: 11/11/2024
+  Última modificación: 11/11/2024
+-->
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IAX actividades escolares</title>  
+  <!-- Vinculación del archivo CSS externo para estilos adicionales -->
+  <link rel="stylesheet" href="formulario.css">   
+</head>
+<body>
+  <!-- Contenedor del logotipo de IAX con ruta relativa a la imagen en la carpeta "images" -->
+  <div class="logo-container">    
+    <img src="images/iax_logo.png" alt="Logo de IAX" style="width: 200px; height: auto;"> 
+  </div> 
+
+  <!-- Título de la página -->
+  <h1>IAX actividades escolares</h1>
+
+  <!-- Campo para alta o edición de actividad -->
+  <fieldset>
+    <legend>Alta/Edición de actividad:</legend>
+
+    <!-- Entrada de correo electrónico y nombre del profesor responsable -->
+    <div class="form-group">
+      <label for="email">Email del profesor responsable:</label>
+      <input type="text" id="email" size="30">
+    </div>
+    <div class="form-group">
+      <label for="nombre-profesor">Nombre del profesor responsable:</label>
+      <input type="text" id="nombre-profesor" size="30">
+    </div>
+
+    <!-- Entrada para nombres de los profesores acompañantes -->
+    <div class="form-group">
+      <label for="acompanantes">Nombres profesores acompañantes:</label>
+      <input type="text" id="acompanantes" size="30">
+    </div>
+
+    <!-- Campo para el título de la actividad -->
+    <div class="form-group">
+      <label for="titulo">Título o denominación de la actividad:</label>
+      <input type="text" id="titulo" size="30">
+    </div>
+
+    <!-- Área de texto para la descripción de la actividad -->
+    <div class="form-group">
+      <label for="descripcion">Descripción de la actividad:</label>
+      <textarea id="descripcion" name="descripcion" placeholder="Escribe aquí la descripción..."></textarea>
+    </div>
+
+    <!-- Selección de departamento -->
+    <div class="form-group">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento" name="departamento">
+        <option value="">Seleccione un departamento</option>
+        <option value="lengua">Lengua y Literatura</option>
+        <option value="matematicas">Matemáticas</option>
+        <option value="ciencias">Ciencias Naturales</option>
+        <option value="sociales">Ciencias Sociales</option>
+        <option value="idiomas">Idiomas</option>
+        <option value="informatica">Informática</option>
+        <option value="educacion_fisica">Educación Física</option>
+        <option value="arte">Arte y Música</option>
+        <option value="orientacion">Orientación</option>
+      </select>
+    </div>
+
+    <!-- Checkbox para marcar si la actividad está valorada -->
+    <div class="form-group checkbox-group">
+      <label for="valorado">Valorado</label>
+      <input type="checkbox" id="valorado">      
+    </div>
+    <br>
+
+    <!-- Fechas y horas de inicio y fin de la actividad -->
+    <fieldset>
+      <legend>Fecha y hora de inicio de la actividad o de salida del IES:</legend>
+      <label>Fecha:</label> 
+      <input type="date" id="fecha_inicio" name="fecha_inicio"> 
+      <label>Hora:</label> 
+      <input type="time" id="hora_inicio" name="hora_inicio">
+    </fieldset>
+    
+    <fieldset>
+      <legend>Fecha y hora de fin de la actividad o de regreso al IES:</legend>
+      <label>Fecha:</label> 
+      <input type="date" id="fecha_fin" name="fecha_fin"> 
+      <label>Hora:</label> 
+      <input type="time" id="hora_fin" name="hora_fin">
+    </fieldset>
+    <br>
+
+    <!-- Lugar de realización de la actividad -->
+    <div class="form-group">
+      <label for="descripcion_actividad">Lugar de realización de la actividad (indicar lugar, municipio, provincia... Lo más completo posible). Si es en el centro, simplemente se indica IAX:</label>
+      <textarea id="descripcion_actividad" name="descripcion_actividad" placeholder="Escribe aquí la descripción..."></textarea>
+    </div>
+
+    <!-- Selección de grupos de alumnos implicados -->
+    <div class="form-group">
+      <label for="alumnos">Grupos de alumnos implicados (selecciona uno o varios)</label>
+      <select id="alumnos" name="alumnos" multiple="multiple">
+        <option value="primero">DAM1</option>
+        <option value="primero">DAM2</option>
+        <option value="segundo">DAM1d</option>
+        <option value="segundo">DAM2d</option>
+      </select>
+    </div>
+
+    <!-- Pregunta sobre la necesidad de autobús para la actividad -->
+    <div class="form-group">
+      <label for="bus">¿Se necesita autobús?</label>
+      <input type="radio" name="autobus" value="si"> Sí 
+      <input type="radio" name="autobus" value="no"> No
+    </div>
+    <br>
+
+    <!-- Campo para el coste de la actividad para el alumno -->
+    <div class="form-group">
+      <label for="precio">Coste de la actividad (€) para el alumno, incluyendo gastos de autobús si es necesario:</label>
+      <input type="text" id="precio" size="30">
+    </div>
+    <br>
+
+    <!-- Contenedor para botones de acción -->
+    <div class="button-container">
+      <button class="button-green" onclick="limpiarFiltros()">Limpiar</button>
+      <button class="button-green" onclick="aplicarFiltros()">Enviar</button>
+    </div>
+    <br>
+  </fieldset>
+</body>
+</html>
+

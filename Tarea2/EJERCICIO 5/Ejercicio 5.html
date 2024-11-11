@@ -1,0 +1,154 @@
+<!-- 
+  Autor: Franklin Eduardo Vicente Jimenez
+  Descripción: Página principal (index.html) del Instituto IAX. 
+               Esta página integra la navegación a las secciones de actividades escolares y contacto,
+               y proporciona información general del instituto. Incluye elementos HTML5 como header, 
+               nav, section, article y footer.
+  Fecha de creación: 11/11/2024
+  Última modificación: 11/11/2024
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto IAX - Página Principal</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace a archivo CSS externo -->
+
+  <style>
+    /* Cambios en el estilo para darle un aspecto más atractivo */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc; /* Fondo color beige */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2d2d2d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #3e3e3e;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffb84d; /* Cambio de color al pasar el ratón */
+    }
+
+    section {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2d2d2d;
+      color: white;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #ffb84d;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Encabezado de la página -->
+  <header>
+    <div class="logo">
+      <img src="images/iax_logo.png" alt="Logo de IAX">
+    </div>
+    <h1>Instituto IAX - Actividades Escolares</h1>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="EJERCICIO 5/actividad.html">Actividades</a></li> <!-- Enlace a Ejercicio 2 -->
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección principal -->
+  <section>
+    <article>
+      <h2>Bienvenido a la página principal del Instituto IAX</h2>
+      <p>En esta página encontrarás información sobre las actividades escolares organizadas por nuestro instituto, así como los detalles de cada actividad, los profesores responsables, y los grupos de alumnos participantes.</p>
+
+      <h3>Actividades Recientes</h3>
+      <p>Consulta las actividades más recientes realizadas por nuestros alumnos en la sección de <a href="EJERCICIO 5/actividad.html">Actividades</a>.</p> <!-- Enlace a Ejercicio 2 -->
+    </article>
+
+    <article>
+      <h3>¿Tienes alguna pregunta?</h3>
+      <p>Puedes ponerte en contacto con nosotros para más información o asistencia. Visita nuestra página de <a href="contacto.html">Contacto</a>.</p> <!-- Enlace a la página de contacto -->
+    </article>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2024 Instituto IAX. Todos los derechos reservados.</p>
+    <p>Dirección: Calle Falsa 123, Ciudad, Provincia - Teléfono: (123) 456-7890</p>
+    <p>Más información: <a href="https://www.iax.es" target="_blank">Visita nuestro sitio web</a></p>
+  </footer>
+
+</body>
+
+</html>
+
+
+

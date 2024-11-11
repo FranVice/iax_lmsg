@@ -1,0 +1,129 @@
+/* Fondo de pantalla para todo el formulario */
+body {
+  background-image: url('fondo_beige.png'); /* Ruta relativa a la imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-attachment: fixed; /* La imagen permanece fija al hacer scroll */
+  font-family: Arial, sans-serif; /* Fuente general */
+  margin: 0; /* Eliminar márgenes por defecto */  
+  padding: 0;
+  display: flex; /* Usamos Flexbox */
+  flex-direction: column; /* Colocamos los elementos en columna */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+  margin-bottom: 20px; /* Un poco de espacio debajo del logo */
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  padding: 30px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  max-width: 800px;
+  width: 90%;
+}
+
+/* Encabezado con logo y título */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el logo y el título */
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px; /* Tamaño del logo */
+  height: auto;
+}
+
+.header h1 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* Ajuste para que el fieldset ocupe el ancho completo */
+fieldset {
+  width: 100%; /* Campo ocupa el 100% del ancho disponible */
+  box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+  padding: 20px; /* Relleno interior para el contenido */
+  margin-bottom: 20px; /* Espacio debajo de cada fieldset */
+  border: 2px solid #444; /* Borde más grueso */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Leyenda de los fieldset */
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #444;
+  padding: 0 10px;
+}
+
+/* Formato general para cada fila de label e input */
+.form-group {
+  display: flex;
+  align-items: center; /* Centra verticalmente el label y el input */
+  margin-bottom: 15px; /* Espacio inferior entre filas */
+}
+
+/* Formato para los labels */
+.form-group label {
+  width: 300px; /* Ancho fijo para alinear todos los labels en una columna */
+  text-align: left; /* Alinea el texto del label a la derecha */
+  padding-right: 10px; /* Espacio entre el label y el input */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs de texto, selectores y áreas de texto */
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+  width: calc(100% - 320px); /* Ocupa el resto del espacio menos el ancho del label */
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+textarea {
+  resize: vertical; /* Permite redimensionar el alto del textarea */
+}
+
+/* Grupo de checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px; /* Espacio entre el checkbox y el label */
+}
+
+/* Estilo para los botones */
+.button-green {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.button-green:hover {
+  background-color: #45a049;
+}   
+/* Estilo para alinear los botones a la derecha */
+.button-container {
+  text-align: right; /* Alinear el contenido del contenedor a la derecha */
+  margin-top: 10px; /* Espaciado superior */
+} 
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el ratón */
+}

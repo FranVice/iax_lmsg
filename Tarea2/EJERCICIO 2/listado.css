@@ -1,0 +1,126 @@
+/* Fondo y estilo general del formulario */
+body {
+    background-image: url('fondo_beige.png'); /* Ruta relativa a la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-attachment: fixed; /* La imagen permanece fija al hacer scroll */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Encabezado y logo */
+header {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo del fieldset */
+fieldset {
+    width: 100%;    
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column; /* Mantén los elementos en una columna */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+legend {
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 0 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+/* Checkbox y elementos en línea */
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho de la tabla */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    white-space: normal;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Estilo de botones */
+.button-green {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-green:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 10px; /* Espacio entre botones */
+}

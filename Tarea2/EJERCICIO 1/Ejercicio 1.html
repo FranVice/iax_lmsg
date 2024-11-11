@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAX actividades escolares</title>
+    <style>
+      table {
+          width: 100%;
+          
+      }
+      th, td {
+          padding: 10px;         
+          text-align: center;
+      }
+      th {          
+          white-space: normal; /* Permite que el texto se divida en varias líneas */
+      }
+  </style>
+</head>
+<body>
+  <h1>IAX actividades escolares</h1>
+    
+  <!-- Filtros -->
+    <fieldset>
+      <legend>Filtros:</legend>
+        Nombre del profesor responsable:
+        <input type="text" size="30">
+        <br>
+        <br>
+        Titulo de la actividad:
+        <input type="text" size="30">
+        <br>
+        <br>
+        Pendiente de validar
+        <input type="checkbox">
+        <br>
+        <br>
+        Fecha desde:
+        <input type="date">
+        <br>
+        <br>
+        Fecha hasta:
+        <input type="date">
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+        <br>
+      </fieldset>
+
+    <!-- Listado -->
+   <h5 align= "center" >Listado de actividades propuestas</h5> 
+   <table style="width: 100;">
+    <thead>
+      <tr>
+        <th>Pdte. Validar</th>
+        <th>Nombre profes. resp.</th>
+        <th>Titulo o denominación de la actividad</th>
+        <th>Departamento</th>
+        <th>Fecha/hora de inicio/salida</th>
+        <th>Fecha/hora de fin/llegada</th>
+        <th>Lugar de realización</th>
+        <th>Grupos implicados</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" name="validar1"></td>
+        <td> Rodrigo Martínez Rodríguez</td>
+        <td> Visita a CPD Universidad de Murcia</td>
+        <td> Informática</td>
+        <td> 10/11/2022 09:00</td>
+        <td> 10/11/2022 14:00</td>
+        <td> Campus de Espinardo</td>
+        <td> DAM1, DAM2, DAM1d, DAM2d</td>
+        <td><button onclick="alert('Acción para Rodrigo Martínez')">Editar</button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="validar2"></td>
+        <td> María Marquez</td>
+        <td> Visita a empresa NTTData</td>
+        <td> Informática</td>
+        <td> 22/11/2022 10:00</td>
+        <td> 22/11/2022 14:30</td>
+        <td> Juan Carlo I, edif. Torre de cristal</td>
+        <td> DAM2, DAM2d</td>
+        <td><button onclick="alert('Acción para María Marquez')">Editar</button></td>
+
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="validar3"></td>
+        <td> Benito Sánchez</td>
+        <td> Visita a empresa Capgemini</td>
+        <td> Informática</td>
+        <td> 25/11/2022 11:00</td>
+        <td> 25/11/2022 13:00</td>
+        <td> Torre B, C. Nelva, 1, 30006 Murcia</td>
+        <td> DAM1, DAM2, DAM1d, DAM2d</td>
+        <td><button onclick="alert('Acción para Benito Sánchez')">Editar</button></td>
+      </tr>
+    </tbody>
+   </table>
+</body>
+</html>

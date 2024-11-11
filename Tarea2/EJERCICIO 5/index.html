@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+
+    <title>IAX Actividades Extraescolares</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+
+<!-- Header: contiene el nombre del instituto, frase y logo -->
+<header>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="iax_logo.png" alt="Logo de IAX" style="width: 60px; height: auto;">
+        <div>
+            <h1>Instituto IAX</h1>
+            <p>IAX Actividades Extraescolares</p>
+        </div>
+    </div>
+</header>
+
+<!-- Navegación principal -->
+<nav>
+    <ul style="list-style-type: none; display: flex; gap: 15px; justify-content: center; padding: 0;">
+    <!-- Usar target="_top" para recargar la página principal -->
+        <li><a href="bienvenida.html" target="content-frame">Principal</a></li>       
+        <li><a href="listado.html" target="content-frame">Listado</a></li>
+        <li><a href="formulario.html" target="content-frame">Formulario</a></li>
+        <li><a href="ultimasactividades.html" target="content-frame">Últimas Actividades</a></li>
+        <li><a href="localizacion.html" target="content-frame">Localización</a></li>
+    </ul>
+</nav>
+
+<!-- Sección principal donde se cargarán las páginas en el iframe -->
+<section style="display: flex; justify-content: center; padding: 20px;">
+    <article style="width: 100vw; display: flex; justify-content: center;">
+        <!-- El iframe carga bienvenida.html por defecto -->
+        <iframe name="content-frame" src="bienvenida.html" style="width: 100vw; height: 500px; border: none;"></iframe>
+    </article>
+</section>
+
+<!-- Footer: información de contacto -->
+<footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+    <p><strong>Contacto del Instituto IAX:</strong></p>
+    <p>web: <a href="https://www.iax.es" target="_blank">www.iax.es</a></p>
+    <p>Email: 30006151@murciaeduca.es</p>
+    <p>Fax: +34 968 27 00 68</p>
+    <p>Teléfono: +34 968 23 20 40</p>
+    <p>Dirección: Av. Don Juan de Borbón, 3, 30007 Murcia, España</p>
+</footer>
+
+</body>
+</html>
