@@ -1,0 +1,43 @@
+Tarea 5 - Ejercicio 2: Consultas XPath/XQuery
+
+1. Código y nombre de los artistas del siglo XVI:
+-------------------------------------------------
+XPath (XQuery para salida formateada):
+for $a in /artistas/artista[nacimiento >= 1501 and nacimiento <= 1600]
+return concat($a/@cod, ' - ', $a/nombreCompleto)
+
+Salida esperada:
+a101 - Diego Velázquez
+a102 - Michelangelo Caravaggio
+
+
+2. Año medio de la fecha de nacimiento de todos los artistas:
+-------------------------------------------------------------
+XQuery:
+avg(/artistas/artista/nacimiento)
+
+Resultado esperado:
+1510.25
+
+
+3. Nombre y edad con la que murieron todos los artistas excepto el artista con código "a102":
+----------------------------------------------------------------------------------------------
+XQuery:
+for $a in /artistas/artista[@cod != 'a102' and fallecimiento]
+return concat($a/nombreCompleto, ' murió a los ', $a/fallecimiento - $a/nacimiento, ' años.')
+
+Salida esperada:
+Diego Velázquez murió a los 61 años.
+Herrada de Landsberg murió a los 70 años.
+Francisco de Goya murió a los 82 años.
+
+
+4. Nombre, país de nacimiento y edad de fallecimiento de los artistas con código distinto a "a102" que murieron con menos de 75 años:
+-----------------------------------------------------------------------------------------------------------------------------------
+XQuery:
+for $a in /artistas/artista[@cod != 'a102' and fallecimiento - nacimiento < 75]
+return concat($a/nombreCompleto, ' nació en ', $a/pais, ' y falleció con ', $a/fallecimiento - $a/nacimiento, ' años')
+
+Salida esperada:
+Diego Velázquez nació en España y falleció con 61 años
+Herrada de Landsberg nació en Alsacia y falleció con 70 años

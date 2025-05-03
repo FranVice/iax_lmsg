@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/Favic/Desktop/2%C2%BA%20DAM/Lenguaje%20de%20Marcas/tarea_5/artistas.xslt"?>
+<!DOCTYPE artistas [
+  <!ELEMENT artistas (artista+)>
+  <!ELEMENT artista (nombreCompleto, nacimiento, fallecimiento?, pais, fichaCompleta)>
+  <!ATTLIST artista cod CDATA #REQUIRED>
+  <!ELEMENT nombreCompleto (#PCDATA)>
+  <!ELEMENT nacimiento (#PCDATA)>
+  <!ELEMENT fallecimiento (#PCDATA)>
+  <!ELEMENT pais (#PCDATA)>
+  <!ELEMENT fichaCompleta (#PCDATA)>
+]>
+<artistas>
+  <artista cod="a101">
+    <nombreCompleto>Diego Velázquez</nombreCompleto>
+    <nacimiento>1599</nacimiento>
+    <fallecimiento>1660</fallecimiento>
+    <pais>España</pais>
+    <fichaCompleta>https://es.wikipedia.org/wiki/Diego_Vel%C3%A1zquez</fichaCompleta>
+  </artista>
+  <artista cod="a102">
+    <nombreCompleto>Michelangelo Caravaggio</nombreCompleto>
+    <nacimiento>1571</nacimiento>
+    <pais>Italia</pais>
+    <fichaCompleta>https://es.wikipedia.org/wiki/Caravaggio</fichaCompleta>
+  </artista>
+  <artista cod="a103">
+    <nombreCompleto>Herrada de Landsberg</nombreCompleto>
+    <nacimiento>1125</nacimiento>
+    <fallecimiento>1195</fallecimiento>
+    <pais>Alsacia</pais>
+    <fichaCompleta>https://es.wikipedia.org/wiki/Herrada_de_Landsberg</fichaCompleta>
+  </artista>
+  <artista cod="a104">
+    <nombreCompleto>Francisco de Goya</nombreCompleto>
+    <nacimiento>1746</nacimiento>
+    <fallecimiento>1828</fallecimiento>
+    <pais>España</pais>
+    <fichaCompleta>https://es.wikipedia.org/wiki/Francisco_de_Goya</fichaCompleta>
+  </artista>
+</artistas>
+
+
